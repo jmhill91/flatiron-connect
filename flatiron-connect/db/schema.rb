@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_143921) do
+ActiveRecord::Schema.define(version: 2019_05_28_145351) do
+
+  create_table "mods", force: :cascade do |t|
+    t.integer "mod_number"
+    t.string "mod_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.integer "students_id"
+    t.integer "mods_id"
+    t.string "lecture_name"
+    t.string "content"
+    t.string "highlights"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mods_id"], name: "index_notes_on_mods_id"
+    t.index ["students_id"], name: "index_notes_on_students_id"
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "name"

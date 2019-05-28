@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  students: one
+  mods: one
+  lecture_name: MyString
+  content: MyString
+  highlights: MyString
+
+two:
+  students: two
+  mods: two
+  lecture_name: MyString
+  content: MyString
+  highlights: MyString
